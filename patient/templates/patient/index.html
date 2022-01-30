@@ -1,0 +1,12 @@
+<body>
+  <h1>Patients</h1>
+  {% if latest_patients %}
+    <ul>
+    {% for patient in latest_patients %}
+        <li><a href="/patient/{{ patient.id }}/">{{ patient.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No patients are available.</p>
+{% endif %}
+</body>

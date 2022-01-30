@@ -1,0 +1,9 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('<int:patient_id>/', views.detail, name='detail'),
+    path("update/<int:pk>/", views.UpdateTaskAPIView.as_view(), name="update_task"),
+]

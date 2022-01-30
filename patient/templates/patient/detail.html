@@ -1,0 +1,13 @@
+<h1>{{ patient.name }}</h1>
+<ul>
+{% for task in patient.task_set.all %}
+<tr>
+  <td>
+  {% if task.done == True %} &#9989 {% else %} &#10060 {% endif %}
+  <a href="/patient/update/{{ task.id }}/">{{ task.name }}</a>
+  <br>
+  </td>
+</tr>
+{% endfor %}
+</ul>
+
