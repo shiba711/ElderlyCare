@@ -4,7 +4,7 @@
 <tr>
   <td>
   {% if task.done == True %} &#9989 {% else %} &#10060 {% endif %}
-  <a href="/patient/update/{{ task.id }}/">{{ task.name }}</a>
+  <a href="/patient/update/{{ patient_id }}/"  target="_blank"> {{ task.name }}</a>
   <br>
   </td>
 </tr>
